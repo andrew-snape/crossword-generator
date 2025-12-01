@@ -1,0 +1,168 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #555;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 10px;
+}
+
+input[type="file"] {
+  padding: 10px;
+  margin-right: 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+}
+
+button {
+  padding: 10px 30px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+#wordsearch, #crossword {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  min-height: 100px;
+}
+
+#wordsearch table, #crossword table {
+  border-collapse: collapse;
+  margin: 20px auto;
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+}
+
+#wordsearch td {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid #ddd;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#crossword table {
+  background-color: #fff;
+}
+
+#crossword td {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+}
+
+#crossword td.empty {
+  background-color: #000;
+  border: 1px solid #000;
+}
+
+#crossword td.filled {
+  background-color: #fff;
+}
+
+#crossword .clue-number {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  font-size: 10px;
+  color: #666;
+}
+
+.word-list {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.word-list h3 {
+  margin-top: 0;
+  color: #555;
+}
+
+.word-list ul {
+  columns: 3;
+  column-gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.word-list li {
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 3px;
+  break-inside: avoid;
+}
+
+.clues {
+  margin-top: 20px;
+}
+
+.clues h3 {
+  color: #555;
+  margin-top: 15px;
+}
+
+.clues ol {
+  padding-left: 20px;
+}
+
+.clues li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.error {
+  color: #d32f2f;
+  background-color: #ffebee;
+  padding: 15px;
+  border-radius: 4px;
+  margin: 20px 0;
+  border-left: 4px solid #d32f2f;
+}
+
+.success {
+  color: #388e3c;
+  background-color: #e8f5e9;
+  padding: 15px;
+  border-radius: 4px;
+  margin: 20px 0;
+  border-left: 4px solid #388e3c;
+}

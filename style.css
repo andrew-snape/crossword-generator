@@ -1,0 +1,13 @@
+body { font-family: Arial; padding: 20px; }
+
+#wordsearch table { border-collapse: collapse; }
+#wordsearch td {
+  border: 1px solid #333; padding: 8px; width: 30px; height: 30px; text-align: center;
+}
+
+.cw-row { display: flex; }
+.cw-cell {
+  width: 30px; height: 30px; border: 1px solid #333;
+  display: flex; justify-content: center; align-items: center;
+}
+.cw-cell.blank { background: #eee; }

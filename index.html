@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Puzzle Generator</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- CSV parser -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+  <!-- Word Search -->
+  <script src="https://cdn.jsdelivr.net/npm/word-search-generator@1.0.4/dist/word-search.js"></script>
+
+  <!-- Crossword -->
+  <script src="https://cdn.jsdelivr.net/npm/crossword-layout-generator/dist/browser.js"></script>
+</head>
+
+<body>
+  <h1>Word Search & Crossword Generator</h1>
+
+  <input type="file" id="csvInput" accept=".csv" />
+  <button id="generateBtn">Generate</button>
+
+  <h2>Word Search</h2>
+  <div id="wordsearch"></div>
+
+  <h2>Crossword</h2>
+  <div id="crossword"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

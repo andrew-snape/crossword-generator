@@ -75,13 +75,15 @@ class CrosswordGenerator {
         };
         
         for (let i = 0; i < word.length; i++) {
-            if (horizontal) {
-                this.grid[row][col + i] = {
-                    letter: word[i],
-                    wordNumbers: [placement.number]
-                };
+            const r = horizontal ? row : row + i;
+            const c = horizontal ? col + i : col;
+            
+            if (this.grid[r][c]) {
+                // Cell already exists (intersection), append word number
+                this.grid[r][c].wordNumbers.push(placement.number);
             } else {
-                this.grid[row + i][col] = {
+                // New cell
+                this.grid[r][c] = {
                     letter: word[i],
                     wordNumbers: [placement.number]
                 };

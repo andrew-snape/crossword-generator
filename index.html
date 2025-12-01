@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossword Puzzle Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Crossword Puzzle Generator</h1>
+            <p>Upload a CSV file with words and clues to generate a crossword puzzle</p>
+        </header>
+
+        <div class="upload-section">
+            <div class="file-input-wrapper">
+                <label for="csvFile" class="file-label">Choose CSV File</label>
+                <input type="file" id="csvFile" accept=".csv" />
+            </div>
+            <p class="format-info">CSV Format: word,clue (one per line)</p>
+            <button id="generateBtn" disabled>Generate Crossword</button>
+        </div>
+
+        <div id="errorMessage" class="error-message"></div>
+        <div id="loadingMessage" class="loading-message">Generating puzzle...</div>
+
+        <div id="puzzleContainer" class="puzzle-container">
+            <div class="puzzle-section">
+                <h2>Crossword Puzzle</h2>
+                <div id="crosswordGrid" class="crossword-grid"></div>
+            </div>
+
+            <div class="clues-section">
+                <div class="clues-column">
+                    <h3>Across</h3>
+                    <ol id="acrossClues" class="clues-list"></ol>
+                </div>
+                <div class="clues-column">
+                    <h3>Down</h3>
+                    <ol id="downClues" class="clues-list"></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button id="checkBtn" class="action-btn" disabled>Check Answers</button>
+            <button id="revealBtn" class="action-btn" disabled>Reveal Answers</button>
+            <button id="clearBtn" class="action-btn" disabled>Clear</button>
+            <button id="newPuzzleBtn" class="action-btn">New Puzzle</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

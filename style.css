@@ -1,0 +1,335 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #667eea;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #666;
+    font-size: 1.1em;
+}
+
+/* Upload Section */
+.upload-section {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.file-input-wrapper {
+    margin-bottom: 15px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file-label {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #667eea;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease;
+}
+
+.file-label:hover {
+    background: #5568d3;
+}
+
+.format-info {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+#generateBtn {
+    padding: 12px 40px;
+    background: #764ba2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#generateBtn:hover:not(:disabled) {
+    background: #643a8a;
+}
+
+#generateBtn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Messages */
+.error-message,
+.loading-message {
+    display: none;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.error-message {
+    background: #fee;
+    color: #c33;
+    border: 1px solid #fcc;
+}
+
+.error-message.success {
+    background: #efe;
+    color: #3c3;
+    border: 1px solid #cfc;
+}
+
+.error-message.info {
+    background: #eef;
+    color: #33c;
+    border: 1px solid #ccf;
+}
+
+.loading-message {
+    background: #fef3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+/* Puzzle Container */
+.puzzle-container {
+    display: none;
+    margin-top: 30px;
+}
+
+.puzzle-section {
+    margin-bottom: 30px;
+}
+
+.puzzle-section h2 {
+    color: #667eea;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Crossword Grid */
+.crossword-grid {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.cell {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+}
+
+.blocked-cell {
+    background: #333;
+}
+
+.active-cell {
+    background: white;
+}
+
+.cell-number {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #667eea;
+    z-index: 1;
+}
+
+.cell-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: transparent;
+    outline: none;
+    padding: 0;
+}
+
+.cell-input:focus {
+    background: #e3f2fd;
+}
+
+.cell-input.correct {
+    background: #c8e6c9;
+    color: #2e7d32;
+}
+
+.cell-input.incorrect {
+    background: #ffcdd2;
+    color: #c62828;
+}
+
+/* Clues Section */
+.clues-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.clues-column h3 {
+    color: #667eea;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.clues-list {
+    list-style-position: inside;
+    padding: 0;
+}
+
+.clues-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+    line-height: 1.5;
+}
+
+.clues-list li:last-child {
+    border-bottom: none;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.action-btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+#checkBtn {
+    background: #4caf50;
+    color: white;
+}
+
+#checkBtn:hover:not(:disabled) {
+    background: #45a049;
+}
+
+#revealBtn {
+    background: #ff9800;
+    color: white;
+}
+
+#revealBtn:hover:not(:disabled) {
+    background: #e68900;
+}
+
+#clearBtn {
+    background: #f44336;
+    color: white;
+}
+
+#clearBtn:hover:not(:disabled) {
+    background: #da190b;
+}
+
+#newPuzzleBtn {
+    background: #2196f3;
+    color: white;
+}
+
+#newPuzzleBtn:hover {
+    background: #0b7dda;
+}
+
+.action-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .clues-section {
+        grid-template-columns: 1fr;
+    }
+
+    .cell {
+        width: 30px;
+        height: 30px;
+    }
+
+    .cell-input {
+        font-size: 14px;
+    }
+
+    .cell-number {
+        font-size: 8px;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .action-btn {
+        width: 100%;
+    }
+}

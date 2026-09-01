@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Puzzle Generator (No Libraries)</title>
-  <style>
-    body { font-family: Arial; padding: 20px; }
-    #wordsearch td {
-      width: 30px; height: 30px;
-      border: 1px solid #333;
-      text-align: center;
-      font-weight: bold;
-    }
-    .cw-row { display: flex; }
-    .cw-cell {
-      width: 30px; height: 30px;
-      border: 1px solid #333;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .cw-cell.blank { backgr
+  <meta charset="UTF-8" />
+  <title>Puzzle Generator</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- CSV parser -->
+  <script src="lib/papaparse.min.js"></script>
+
+  <!-- Word Search -->
+  <script src="lib/word-search.js"></script>
+
+  <!-- Crossword -->
+  <script src="lib/layout_generator.js"></script>
+</head>
+
+<body>
+  <h1>Word Search & Crossword Generator</h1>
+
+  <input type="file" id="csvInput" accept=".csv" />
+  <button id="generateBtn">Generate</button>
+
+  <h2>Word Search</h2>
+  <div id="wordsearch"></div>
+
+  <h2>Crossword</h2>
+  <div id="crossword"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,57 +1,71 @@
-# crossword-generator
+# Crossword Generator
 
-A web-based application that generates both Word Search and Crossword puzzles from CSV input files.
+A web-based crossword puzzle generator that creates interactive crossword puzzles from CSV files containing words and clues.
 
 ## Features
 
-- **Word Search Generator**: Creates a 15x15 grid with hidden words placed horizontally, vertically, and diagonally
-- **Crossword Generator**: Creates an interactive crossword puzzle with numbered clues
-- **CSV Input**: Simple CSV format with words and clues
-- **No Dependencies**: All libraries are included locally (no CDN required)
+- **CSV Parsing**: Upload CSV files with word-clue pairs
+- **Smart Puzzle Generation**: Automatically arranges words to create valid crossword puzzles with intersections
+- **Interactive Grid**: Click and type to fill in answers
+- **Keyboard Navigation**: Use arrow keys to move between cells
+- **Answer Checking**: Validate your answers with visual feedback (green for correct, red for incorrect)
+- **Reveal Answers**: Show all solutions
+- **Responsive Design**: Works on desktop and mobile devices
 
 ## Usage
 
 1. Open `index.html` in a web browser
-2. Click "Choose File" and select a CSV file
-3. Click "Generate" to create both puzzles
+2. Click "Choose CSV File" to upload your word list
+3. Click "Generate Crossword" to create the puzzle
+4. Fill in the crossword by clicking cells and typing letters
+5. Use the action buttons:
+   - **Check Answers**: Validate your entries
+   - **Reveal Answers**: Show all solutions
+   - **Clear**: Reset your entries
+   - **New Puzzle**: Start over with a different file
 
 ## CSV Format
 
-The CSV file should have two columns:
-- `word`: The word to include in the puzzles
-- `clue`: The clue for the crossword (optional for word search only)
-
-Example:
-```csv
-word,clue
-PYTHON,A popular programming language
-JAVASCRIPT,Scripting language for web browsers
-HTML,Markup language for web pages
-CSS,Style sheet language
+Create a CSV file with one word-clue pair per line:
+```
+WORD,Clue for the word
+EXAMPLE,A representative form or pattern
+PUZZLE,A game that tests ingenuity
 ```
 
-See `sample.csv` for a complete example.
+**Requirements:**
+- Words must contain only letters (A-Z)
+- Each line should have format: `word,clue`
+- Words are case-insensitive (automatically converted to uppercase)
 
-## Running Locally
+## Files
 
-Simply open `index.html` in any modern web browser. No build process or server is required.
+- **index.html**: Main webpage with UI elements
+- **script.js**: Crossword generation algorithm and UI controller
+- **style.css**: Styling and responsive design
+- **sample.csv**: Example word list for testing
 
-For development with live reload, you can use:
-```bash
-python3 -m http.server 8000
-```
+## Technical Details
 
-Then navigate to `http://localhost:8000/`
+### CrosswordGenerator Class
+- Parses CSV input
+- Implements word placement algorithm that finds optimal intersections
+- Handles grid sizing and trimming
+- Tracks word placements and numbering
 
-## Technologies Used
+### CrosswordUI Class
+- Manages file upload and user interactions
+- Renders the crossword grid with numbered cells
+- Handles keyboard input and navigation
+- Provides answer validation and reveal functionality
 
-- **HTML5**: Structure and semantic markup
-- **CSS3**: Styling and layout
-- **JavaScript (ES6)**: Core functionality
-- **PapaParse**: CSV parsing library
-- **Crossword Layout Generator**: Algorithm for crossword layout
-- **Custom Word Search**: Simple word search puzzle generator
+## Browser Compatibility
+
+Works in all modern browsers that support:
+- ES6 JavaScript
+- CSS Grid
+- FileReader API
 
 ## License
 
-MIT
+Open source - feel free to use and modify!

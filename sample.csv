@@ -1,11 +1,10 @@
-word,clue
-PYTHON,A popular programming language
-JAVASCRIPT,Scripting language for web browsers
+PYTHON,A popular programming language named after a comedy troupe
+JAVASCRIPT,The language of the web browser
 HTML,Markup language for web pages
-CSS,Style sheet language
-REACT,JavaScript library for building UIs
-ANGULAR,TypeScript-based web framework
-NODE,JavaScript runtime environment
-GITHUB,Code hosting platform
-DOCKER,Container platform
-KUBERNETES,Container orchestration system
+CSS,Used to style web pages
+CODE,What programmers write
+FUNCTION,A reusable block of code
+VARIABLE,A named storage location
+ALGORITHM,Step-by-step procedure for solving a problem
+DEBUG,To find and fix errors
+ARRAY,A collection of elements
